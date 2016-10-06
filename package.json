@@ -1,0 +1,27 @@
+{
+  "name": "late-night-eatery",
+  "version": "1.0.0",
+  "description": "find restaurant that open only, this will help late night party goers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottdiallo/openRestau.git"
+  },
+  "author": "Scott Diallo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottdiallo/openRestau/issues"
+  },
+  "homepage": "https://github.com/scottdiallo/openRestau#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "jquery": "^3.1.1",
+    "unirest": "^0.5.1"
+  }
+}
