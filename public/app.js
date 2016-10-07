@@ -1,19 +1,32 @@
 $(document).ready(function () {
-    console.log('it works!!!');
+    //    console.log('it works!!!');
 
     $('.searchBtn').on('click', function (e) {
-        displayApiResultsOnDom();
         e.preventDefault();
+        var userInput = getYelpData($('.searchQuery').val());
+        //        getYelpData($('.location').val());
+
+        //        var userInput = $('.searchQuery').val();
     });
 
 
-    function displayApiResultsOnDom() {
-        var resultElement = '';
+    function getYelpData(userInput) {
 
-        $.ajax({
-            type: "GET",
-            url: "https://api.yelp.com/v3/businesses/search",
-            dataType: 'json'
-        })
-    }
+        var yelpData = {
+            url: 'https://api.yelp.com/v3/businesses/search' + userInput,
+            dataType: ' json',
+            data: {
+                part: '',
+                key: 'yHRcIf6jzZ3QvcS88zHrwg',
+                q: userInput,
+            },
+            success: function (data) {
+                console.log(data);
+            }
+        }
+
+    };
+
+    $.ajax(yelpData);
+
 });
