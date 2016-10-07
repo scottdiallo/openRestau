@@ -1,21 +1,19 @@
-var app = angular.module('lateNightEatery', ['ngAnimate', 'ngRoute']);
+$(document).ready(function () {
+    console.log('it works!!!');
 
-//defining all routes below
-//app.config(['$routeProvider', function ($routeProvider) {
-//    $routeProvider
-//        .when('/details', {
-//        templateUrl: 'partials/details.html',
-//        controller: 'detailsController'
-//    })
-//        .when('/charges', {
-//        templateUrl: 'partials/charges.html',
-//        controller: 'chargesController'
-//    })
-//        .when('/earnings', {
-//        templateUrl: 'partials/earnings.html',
-//        controller: 'earningsController'
-//    })
-//        .otherwise({
-//        redirectTo: '/details'
-//    });
-//}]);
+    $('.searchBtn').on('click', function (e) {
+        displayApiResultsOnDom();
+        e.preventDefault();
+    });
+
+
+    function displayApiResultsOnDom() {
+        var resultElement = '';
+
+        $.ajax({
+            type: "GET",
+            url: "https://api.yelp.com/v3/businesses/search",
+            dataType: 'json'
+        })
+    }
+});

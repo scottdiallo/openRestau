@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="lateNightEatery">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,25 @@
 <body>
 
     <h2 class="heroText">Find Restaurand That Are Open Late Night</h2>
-    <div class="container">
-        <div class="search">
-            <button class="searchBtn">Search</button>
-        </div>
-    </div>
+    <form action="submit">
+        <label for="query" class="query">Location:
+            <input type="text" class="location" placeholder="San Francisco, CA or 94107" />
+        </label>
+        <label for="query" class="query"><span class="pseudo-input-text">Find:</span>
+            <input type="text" class="searchQuery" placeholder="Taco, Dinner, Sandwich..." />
+        </label>
+        <button class="submitBnt">Search</button>
+    </form>
     <ul class="displayResults">
 
     </ul>
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js "></script>
     <script src="app.js"></script>
-
+    <br>
+    <br>
     <footer>
         <p>Made With &hearts; In San Francisco</p>
     </footer>

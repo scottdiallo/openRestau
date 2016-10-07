@@ -12,6 +12,11 @@ app.use(function (req, res, next) {
     next();
 });
 
+var yelp = require('yelpApi')('yHRcIf6jzZ3QvcS88zHrwg');
+console.log('hello world');
 
+api.get('/yelp', function (request, response) {
+
+})
 
 app.listen(process.env.PORT || 8080);
