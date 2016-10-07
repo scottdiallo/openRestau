@@ -13,7 +13,7 @@ $(document).ready(function () {
     function getYelpData(userInput) {
 
         var yelpData = {
-            url: 'https://api.yelp.com/v3/businesses/search' + userInput,
+            url: 'http://api.yelp.com/v3/businesses/search' + userInput,
             dataType: ' json',
             data: {
                 part: '',
@@ -24,9 +24,9 @@ $(document).ready(function () {
                 console.log(data);
             }
         }
+        $.ajax(yelpData);
 
     };
 
-    $.ajax(yelpData);
 
 });
